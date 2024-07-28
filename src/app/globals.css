@@ -6,4 +6,8 @@
   .bg-rainbow {
     @apply bg-[linear-gradient(to_right,rgb(252,_214,_255,_.7),rgb(41,_216,_255,_.7),rgb(255,_253,_128,_.7),rgb(248,_154,_191,_.7),rgb(252,_214,_255,_.7))];
   }
+
+  .bg-rainbow-2 {
+    @apply bg-[linear-gradient(to_right,#f87bff,#fb92cf,#ffdd9b,#c2f0b1,#2fd8fe)];
+  }
 }
