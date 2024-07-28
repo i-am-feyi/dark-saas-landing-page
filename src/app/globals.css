@@ -10,4 +10,12 @@
   .bg-rainbow-2 {
     @apply bg-[linear-gradient(to_right,#f87bff,#fb92cf,#ffdd9b,#c2f0b1,#2fd8fe)];
   }
+
+  .bg-gradient-1 {
+    @apply bg-[linear-gradient(to_bottom,#000,#200d42_34%,#4f21a1_65%,#a46edb_82%)];
+  }
+
+  .bg-gradient-2 {
+    @apply bg-[linear-gradient(to_right,#f87aff,#fb93d0,#ffdd99,#c3f0b2,#2fd8fe)];
+  }
 }
