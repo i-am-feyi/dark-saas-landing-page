@@ -1,4 +1,5 @@
 import EcosystemIcon from "@/assets/icons/ecosystem.svg";
+import Feature from "./Feature";
 
 const features = [
   {
@@ -30,17 +31,8 @@ export const Features = () => {
           Set tasks, get reminders, and see your progress simply and quickly.
         </p>
         <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center">
-          {features.map(({ title, description }, index) => (
-            <div
-              key={title}
-              className="sm:flex-1 border border-white/30 px-5 py-10 text-center rounded-xl max-w-80"
-            >
-              <div className="inline-flex size-14 bg-white text-black justify-center items-center rounded-lg">
-                <EcosystemIcon />
-              </div>
-              <h3 className="mt-6 font-bold ">{title}</h3>
-              <p className="mt-2 text-white/70">{description}</p>
-            </div>
+          {features.map(({ title, description }) => (
+            <Feature title={title} description={description} key={title} />
           ))}
         </div>
       </div>
