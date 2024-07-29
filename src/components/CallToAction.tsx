@@ -1,10 +1,26 @@
+"use client";
+
+import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 import GearImage from "@/assets/images/helix2.png";
 import PieChartImage from "@/assets/images/emojistar.png";
-import Image from "next/image";
+import { useRef } from "react";
 
 export const CallToAction = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end end"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [-60, 60]);
+
   return (
-    <section className="bg-black text-white py-[72px] sm:py-24 text-center">
+    <section
+      ref={sectionRef}
+      className="bg-black text-white py-[72px] sm:py-24 text-center"
+    >
       <div className="container max-w-5xl relative">
         <div className="max-w-xl mx-auto">
           <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">
@@ -25,19 +41,25 @@ export const CallToAction = () => {
             </button>
           </form>
         </div>
-        <Image
-          src={GearImage}
+        <motion.img
+          src={GearImage.src}
           alt="Gear Image"
           width={225}
           height={225}
           className="hidden sm:block absolute top-0 left-[calc(100%-48px)]"
+          style={{
+            translateY,
+          }}
         />
-        <Image
-          src={PieChartImage}
+        <motion.img
+          src={PieChartImage.src}
           alt="Pie Chart Image"
           width={200}
           height={200}
           className="hidden sm:block absolute -top-[120px] right-[calc(100%-48px)]"
+          style={{
+            translateY,
+          }}
         />
       </div>
     </section>
