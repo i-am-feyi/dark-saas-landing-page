@@ -9,8 +9,10 @@ export const Navbar = () => {
       <div className="container">
         <div className="py-4 flex justify-between items-center">
           <div className="relative">
-            <div className="absolute w-full top-2 bottom-0 h-full bg-rainbow-2 blur-md" />
-            <Image src={logo} alt="Logo" className="size-12 relative" />
+            <div className="absolute w-full top-0 bottom-0 h-full bg-rainbow-2 blur-md" />
+            <Link href="/">
+              <Image src={logo} alt="Logo" className="size-12 relative" />
+            </Link>
           </div>
           <div className="border border-white border-opacity-30 size-10 inline-flex justify-center items-center rounded-lg sm:hidden">
             <MenuIcon className="text-white" />

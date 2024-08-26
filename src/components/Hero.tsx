@@ -47,7 +47,7 @@ export const Hero = () => {
             <motion.div
               className="hidden sm:inline absolute top-[56px] left-[498px]"
               drag
-              // dragSnapToOrigin
+              dragSnapToOrigin
             >
               <Image
                 src={MessageImage}

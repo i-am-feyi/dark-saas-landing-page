@@ -42,7 +42,7 @@ export const LogoTicker = () => {
     <section className="bg-black text-white py-[72px] sm:py-24">
       <div className="container">
         <h2 className="text-center text-xl text-white/70 px-8">
-          Trusted by the world's most innovative teams
+          Trusted by the world&apos;s most innovative teams
         </h2>
         <div className="flex overflow-hidden mt-9 [mask-image:linear-gradient(to_right,transparent_5%,#f7f7f7,#f7f7f7,transparent_95%)]">
           <motion.div
